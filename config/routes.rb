@@ -1,1 +1,7 @@
-Rails.application.routes.draw do`n  root "articles#index"`n  resources :articles do`n    resources :comments, only: [:create, :destroy]`n  end`nend
+Rails.application.routes.draw do
+  root "articles#index"
+
+  resources :articles do
+    resources :comments, only: [:create, :destroy]
+  end
+end
