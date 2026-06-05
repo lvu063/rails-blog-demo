@@ -1,1 +1,10 @@
-class CreateComments < ActiveRecord::Migration[8.0]`n  def change`n    create_table :comments do |t|`n      t.string :commenter, null: false`n      t.text :body, null: false`n      t.references :article, null: false, foreign_key: true`n      t.timestamps`n    end`n  end`nend
+class CreateComments < ActiveRecord::Migration[8.0]
+  def change
+    create_table :comments do |t|
+      t.string :commenter, null: false
+      t.text :body, null: false
+      t.references :article, null: false, foreign_key: true
+      t.timestamps
+    end
+  end
+end
