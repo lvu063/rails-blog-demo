@@ -1,0 +1,30 @@
+<%= form_with model: article do |form| %>
+  <% if article.errors.any? %>
+    <div class="error-list">
+      <ul>
+        <% article.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, placeholder: "Article title" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, placeholder: "Write your article..." %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :category %>
+    <%= form.select :category, Article::CATEGORIES, prompt: "Select a category" %>
+  </div>
+
+  <div class="form-actions">
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>
