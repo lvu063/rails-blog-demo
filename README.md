@@ -4,7 +4,7 @@
 
 ---
 
-**Live demo:** [rails-demo.lovable.app/](https://rails-demo.lovable.app/)
+**Live demo:** [rails-demo.lovable.app](https://rails-demo.lovable.app/)
 
 ---
 
