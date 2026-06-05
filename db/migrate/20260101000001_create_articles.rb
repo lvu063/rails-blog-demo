@@ -1,0 +1,1 @@
+class CreateArticles < ActiveRecord::Migration[8.0]`n  def change`n    create_table :articles do |t|`n      t.string :title, null: false`n      t.text :body, null: false`n      t.string :category, null: false, default: "Other"`n      t.timestamps`n    end`n  end`nend
